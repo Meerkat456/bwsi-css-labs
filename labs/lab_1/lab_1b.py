@@ -58,6 +58,9 @@ def main():
     num1 = float(input("Enter the first number: "))
     num2 = float(input("Enter the second number: "))
     operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
+    if operation not in ["add", "subtract", "multiply", "divide"]:
+        print("Invalid operation. Please choose from 'add', 'subtract', 'multiply', or 'divide'.")
+        return
 
     # Perform the calculation and display the result
     result = simple_calculator(operation, num1, num2)
